@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Néstor · Páginas web para tu negocio · Capiatá</title>
+<meta name="description" content="Páginas web, catálogos online con pedidos por WhatsApp y sistemas a medida para negocios de Capiatá y alrededores.">
+<meta property="og:title" content="Tu negocio en internet · Páginas web desde ₲ 50.000">
+<meta property="og:description" content="Páginas web, catálogos con pedidos por WhatsApp y sistemas a medida. Capiatá, Paraguay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14211c;
+    --ink-soft:#4a5a53;
+    --paper:#f6f1e7;
+    --card:#fffdf8;
+    --line:#e3dacb;
+    --green:#1f6b4a;
+    --green-dark:#154d35;
+    --sun:#f2b33d;
+    --wa:#25d366;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Inter,system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;line-height:1.08;letter-spacing:-.02em}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* nav */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .brand{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.25rem;text-decoration:none}
+  .brand span{color:var(--green)}
+  .nav-cta{font-weight:600;font-size:.92rem;text-decoration:none;border:1.5px solid var(--ink);padding:8px 16px;border-radius:999px}
+  .nav-cta:hover{background:var(--ink);color:var(--paper)}
+
+  /* hero */
+  .hero{padding:48px 0 72px;display:grid;gap:40px;grid-template-columns:1.2fr .8fr;align-items:center}
+  .tag{display:inline-flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:500;color:var(--ink-soft);margin-bottom:22px}
+  .tag i{width:8px;height:8px;border-radius:50%;background:var(--wa);display:inline-block}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.3rem);font-weight:800}
+  .hero h1 em{font-style:normal;color:var(--green);position:relative;white-space:nowrap}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.22em;background:var(--sun);z-index:-1;border-radius:4px;opacity:.75}
+  .hero p{font-size:1.15rem;color:var(--ink-soft);margin:22px 0 30px;max-width:34ch}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--green);color:#fff}
+  .btn-wa:hover{background:var(--green-dark)}
+  .btn-ghost{border:1.5px solid var(--line);background:var(--card)}
+  .wa-ico{width:20px;height:20px;fill:currentColor}
+
+  /* hero visual: phone mock */
+  .phone{justify-self:center;width:250px;aspect-ratio:9/18;background:var(--ink);border-radius:36px;padding:12px;box-shadow:0 30px 60px -20px rgba(20,33,28,.45);transform:rotate(3deg)}
+  .screen{background:var(--card);border-radius:26px;height:100%;overflow:hidden;display:flex;flex-direction:column}
+  .scr-top{background:var(--green);color:#fff;padding:26px 16px 18px}
+  .scr-top b{font-family:"Bricolage Grotesque";font-size:1.15rem;display:block}
+  .scr-top small{opacity:.8;font-size:.72rem}
+  .scr-body{padding:14px;display:grid;gap:10px;flex:1}
+  .scr-item{display:flex;gap:10px;align-items:center;background:var(--paper);border-radius:12px;padding:9px}
+  .scr-item .ph{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--sun),#e98a3a);flex:none}
+  .scr-item:nth-child(2) .ph{background:linear-gradient(135deg,#7cc4a0,var(--green))}
+  .scr-item:nth-child(3) .ph{background:linear-gradient(135deg,#c9b8f0,#7d63c9)}
+  .scr-item .ln{flex:1}
+  .scr-item .ln i{display:block;height:7px;border-radius:4px;background:var(--line);margin:4px 0}
+  .scr-item .ln i:last-child{width:55%}
+  .scr-wa{margin:0 14px 16px;background:var(--wa);color:#fff;border-radius:12px;text-align:center;font-weight:600;font-size:.8rem;padding:10px}
+
+  /* sections */
+  section{padding:72px 0}
+  .eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+  h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;margin-bottom:14px}
+  .lead{color:var(--ink-soft);font-size:1.08rem;max-width:56ch;margin-bottom:40px}
+
+  /* services */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .svc .ico{font-size:1.8rem;width:56px;height:56px;display:grid;place-items:center;background:var(--paper);border-radius:14px;margin-bottom:18px}
+  .svc h3{font-size:1.3rem;margin-bottom:8px}
+  .svc p{color:var(--ink-soft);font-size:.97rem}
+  .svc ul{list-style:none;margin-top:14px;display:grid;gap:6px;font-size:.92rem}
+  .svc li::before{content:"✓ ";color:var(--green);font-weight:700}
+
+  /* works */
+  .dark{background:var(--ink);color:var(--paper)}
+  .dark .eyebrow{color:var(--sun)}
+  .dark .lead{color:#b9c4bf}
+  .works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .work{background:#1d2e27;border:1px solid #2c4037;border-radius:var(--radius);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+  .work:hover{transform:translateY(-4px);border-color:var(--sun)}
+  .work .thumb{aspect-ratio:16/10;display:grid;place-items:center;font-size:3.2rem;position:relative}
+  .work:nth-child(1) .thumb{background:linear-gradient(135deg,#2563eb,#1e3a8a)}
+  .work:nth-child(2) .thumb{background:linear-gradient(135deg,#f2b33d,#d9622b)}
+  .work:nth-child(3) .thumb{background:linear-gradient(135deg,#3f9a6e,#1f6b4a)}
+  .work .thumb{overflow:hidden}
+  .work .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .4s}
+  .work:hover .thumb img{transform:scale(1.04)}
+  .work .thumb::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -40px 40px -30px rgba(0,0,0,.35);pointer-events:none}
+  .work .thumb small{z-index:1;position:absolute;top:12px;left:12px;font-size:.72rem;font-weight:600;background:rgba(20,33,28,.85);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);color:#fff;padding:4px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);letter-spacing:.03em}
+  .work .info{padding:22px;flex:1;display:flex;flex-direction:column}
+  .work h3{font-size:1.2rem;margin-bottom:8px}
+  .work p{color:#b9c4bf;font-size:.93rem;flex:1}
+  .work .go{margin-top:16px;font-weight:600;color:var(--sun);font-size:.92rem}
+
+  /* prices */
+  .prices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+  .price.feat{border:2px solid var(--green);position:relative}
+  .price.feat::before{content:"Más pedido";position:absolute;top:-12px;left:20px;background:var(--green);color:#fff;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:999px}
+  .price h3{font-size:1.1rem}
+  .price .amt{font-family:"Bricolage Grotesque";font-size:1.8rem;font-weight:800;margin:10px 0 4px}
+  .price .amt small{font-size:.85rem;font-weight:500;color:var(--ink-soft)}
+  .price p{font-size:.9rem;color:var(--ink-soft);flex:1}
+  .price-note{margin-top:22px;font-size:.92rem;color:var(--ink-soft)}
+  .price-note b{color:var(--ink)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+  .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:18px}
+  .step::before{content:"0" counter(s);font-family:"Bricolage Grotesque";font-weight:800;font-size:2.4rem;color:var(--green);display:block;margin-bottom:6px}
+  .step h3{font-size:1.2rem;margin-bottom:6px}
+  .step p{color:var(--ink-soft);font-size:.96rem}
+
+  /* cta */
+  .cta{background:var(--green);color:#fff;border-radius:28px;padding:56px 40px;text-align:center;margin:0 0 72px}
+  .cta h2{color:#fff}
+  .cta p{opacity:.85;margin:0 auto 28px;max-width:46ch;font-size:1.08rem}
+  .cta .btn{background:#fff;color:var(--green-dark)}
+  .cta .where{margin-top:22px;font-size:.9rem;opacity:.8}
+
+  footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  /* floating wa */
+  .float{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.35);z-index:10}
+  .float svg{width:30px;height:30px;fill:#fff}
+
+  @media (max-width:880px){
+    .hero{grid-template-columns:1fr;padding-top:24px}
+    .phone{display:none}
+    .services,.works,.steps{grid-template-columns:1fr}
+    .prices{grid-template-columns:1fr 1fr}
+    section{padding:56px 0}
+    .cta{padding:44px 24px;border-radius:22px}
+  }
+  @media (max-width:480px){
+    .prices{grid-template-columns:1fr}
+    .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="#" class="brand">Néstor<span>.web</span></a>
+    <a class="nav-cta" href="#contacto">Contacto</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="tag"><i></i> Capiatá · Atiendo en persona y por WhatsApp</div>
+      <h1>Tu negocio, <em>en el celular</em> de tus clientes.</h1>
+      <p>Hago páginas web, catálogos con pedidos por WhatsApp y sistemas a medida. Rápido, a buen precio y con alguien cerca a quien preguntarle.</p>
+      <div class="btns">
+        <a class="btn btn-wa wa-link" href="#" data-msg="Hola Néstor, vi tu cartel y quiero una página para mi negocio.">
+          <svg class="wa-ico" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2 .07.14.11.3.02.48-.09.18-.14.29-.27.45-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.7 1.16 1.51 1.88 1.04.92 1.91 1.21 2.18 1.34.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.13.45.2.52.31.07.11.07.65-.17 1.33z"/></svg>
+          Escribime por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
+      </div>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="scr-top"><b>Tu Negocio</b><small>Abierto hoy · 8:00 a 20:00</small></div>
+        <div class="scr-body">
+          <div class="scr-item"><div class="ph"></div><div class="ln"><i></i><i></i></div></div>
+          <div class="scr-item"><div class="ph"></div><div class="ln"><i></i><i></i></div></div>
+          <div class="scr-item"><div class="ph"></div><div class="ln"><i></i><i></i></div></div>
+        </div>
+        <div class="scr-wa">Pedir por WhatsApp</div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Qué hago</div>
+    <h2>Lo que tu negocio necesita para vender más</h2>
+    <p class="lead">No hace falta saber de tecnología. Vos me contás qué vendés y yo me encargo del resto.</p>
+    <div class="services">
+      <div class="svc">
+        <div class="ico">📱</div>
+        <h3>Página para tu negocio</h3>
+        <p>Tu cartel convertido en página web, con un QR para que te encuentren al instante.</p>
+        <ul><li>Fotos, horarios y ubicación</li><li>Botón directo a WhatsApp</li><li>Código QR para imprimir</li></ul>
+      </div>
+      <div class="svc">
+        <div class="ico">🛍️</div>
+        <h3>Catálogo online</h3>
+        <p>Mostrá todos tus productos ordenados por categoría y recibí los pedidos por WhatsApp.</p>
+        <ul><li>Productos con precio y foto</li><li>Categorías fáciles de recorrer</li><li>Consulta de cada producto en 1 toque</li></ul>
+      </div>
+      <div class="svc">
+        <div class="ico">⚙️</div>
+        <h3>Sistemas a medida</h3>
+        <p>Aplicaciones web para ordenar tu trabajo: turnos, stock, pedidos, clientes y más.</p>
+        <ul><li>Pensado para tu forma de trabajar</li><li>Funciona en celular y compu</li><li>Soporte cercano</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="trabajos">
+  <div class="wrap">
+    <div class="eyebrow">Trabajos</div>
+    <h2>Algunos trabajos que hice</h2>
+    <p class="lead">Tocá cualquiera para verlo funcionando. Así podría quedar el tuyo.</p>
+    <div class="works">
+      <a class="work" href="https://electrodiario.github.io/catalogo/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/catalogo.jpg" alt="Captura del catálogo de electrodomésticos" width="800" height="500" loading="lazy"><small>Catálogo</small></div>
+        <div class="info">
+          <h3>Catálogo de electrodomésticos</h3>
+          <p>Más de 10 categorías, desde celulares hasta colchones, con consulta directa por WhatsApp en cada producto.</p>
+          <span class="go">Ver catálogo →</span>
+        </div>
+      </a>
+      <a class="work" href="https://menucarteleria-art.github.io/menu/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/disenos.jpg" alt="Captura del muestrario de diseños" width="800" height="500" loading="lazy"><small>Diseños</small></div>
+        <div class="info">
+          <h3>Muestrario de diseños</h3>
+          <p>Modelos para cafeterías, ferreterías, peluquerías, veterinarias, librerías y más. Elegí el estilo que te guste.</p>
+          <span class="go">Ver diseños →</span>
+        </div>
+      </a>
+      <a class="work" href="https://nestornjrz.github.io/ventaterreno/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/terreno.jpg" alt="Captura de la página de venta del terreno" width="800" height="500" loading="lazy"><small>Inmueble</small></div>
+        <div class="info">
+          <h3>Venta de terreno</h3>
+          <p>Página para vender una propiedad en Capiatá, con plano del lote, mapa de ubicación y contacto directo.</p>
+          <span class="go">Ver página →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="precios">
+  <div class="wrap">
+    <div class="eyebrow">Precios</div>
+    <h2>Precios claros, sin sorpresas</h2>
+    <p class="lead">Pago único por el diseño. El precio final depende de lo que necesites, y te lo paso antes de empezar.</p>
+    <div class="prices">
+      <div class="price">
+        <h3>Sencilla</h3>
+        <div class="amt">₲ 50.000</div>
+        <p>Una página con tu información, horarios, ubicación y botón de WhatsApp.</p>
+      </div>
+      <div class="price feat">
+        <h3>Elaborada</h3>
+        <div class="amt">₲ 100.000</div>
+        <p>Más secciones, galería de fotos y un diseño más trabajado.</p>
+      </div>
+      <div class="price">
+        <h3>Sofisticada</h3>
+        <div class="amt">₲ 200.000</div>
+        <p>Carruseles, animaciones, promociones y redes sociales.</p>
+      </div>
+      <div class="price">
+        <h3>Premium</h3>
+        <div class="amt">₲ 400.000</div>
+        <p>Diseño a medida y catálogo completo de productos.</p>
+      </div>
+    </div>
+    <p class="price-note"><b>¿Necesitás un sistema a medida?</b> Contame qué querés hacer y te paso un presupuesto sin compromiso.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Cómo trabajo</div>
+    <h2>En pocos días ya estás online</h2>
+    <div class="steps" style="margin-top:36px">
+      <div class="step"><h3>Me contás</h3><p>Por WhatsApp o en persona. Me pasás fotos, precios y lo que querés mostrar.</p></div>
+      <div class="step"><h3>Te muestro</h3><p>Te preparo un borrador y lo ajustamos juntos hasta que te guste.</p></div>
+      <div class="step"><h3>Publicamos</h3><p>Tu página queda online, con tu QR listo para imprimir y compartir.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" id="contacto">
+  <div class="cta">
+    <h2>¿Arrancamos con tu página?</h2>
+    <p>Escribime y te respondo enseguida. La consulta no tiene costo.</p>
+    <a class="btn wa-link" href="#" data-msg="Hola Néstor, quiero consultar por una página web.">
+      <svg class="wa-ico" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2 .07.14.11.3.02.48-.09.18-.14.29-.27.45-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.7 1.16 1.51 1.88 1.04.92 1.91 1.21 2.18 1.34.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.13.45.2.52.31.07.11.07.65-.17 1.33z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <div class="where">📍 Capiatá, Paraguay · También impresiones y fotocopias</div>
+  </div>
+
+  <footer>
+    <span>© 2026 Néstor · Desarrollo web</span>
+    <span>Hecho en Capiatá 🇵🇾</span>
+  </footer>
+</div>
+
+<a class="float wa-link" href="#" data-msg="Hola Néstor, vi tu página y quiero consultar." aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2 .07.14.11.3.02.48-.09.18-.14.29-.27.45-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.7 1.16 1.51 1.88 1.04.92 1.91 1.21 2.18 1.34.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.13.45.2.52.31.07.11.07.65-.17 1.33z"/></svg>
+</a>
+
+<script>
+  // Cambiá este número si hace falta (código de país + número, sin + ni espacios)
+  const WHATSAPP = "595984263723";
+  document.querySelectorAll(".wa-link").forEach(a => {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg || "Hola");
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+</script>
+</body>
+</html>
